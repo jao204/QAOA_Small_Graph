@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Oct  5 13:56:22 2020
-
-@author: lmtreffert
-"""
-
 #These are two useful data science libraries
 import pandas as pd
 import numpy as np
