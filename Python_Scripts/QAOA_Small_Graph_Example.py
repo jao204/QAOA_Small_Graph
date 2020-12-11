@@ -3,6 +3,8 @@ import pandas as pd
 import numpy as np
 
 
+
+
 path= '..\\Small_Graph_Data\\'
 
 #Import Data From CSVs, format as pandas DataFrame Objects
@@ -13,12 +15,18 @@ df_6v = pd.read_csv(path+'six_vertex.csv',index_col = 'graph_number')
 df_7v = pd.read_csv(path+'seven_vertex.csv',index_col = 'graph_number')
 df_8v = pd.read_csv(path+'eight_vertex.csv',index_col = 'graph_number')
 
-#Create a new dataframe only including graphs with desired traits
-#Ex. Bipartite Graphs with Six Vertices
+###Create a new dataframe only including graphs with desired traits
 
-df_6v_bpt = df_6v.loc[df_6v['is_bipartite']=='True']
+#Ex. Graphs on Eight Vertices which are biparitie
+df_8v_bpt = df_8v[df_8v["is_bipartite"]==True]
 
-#Ex. Bipartite Graphs with 6 Vertices and <=8 edges
+#Ex. You are interested in non-bipartite graphs on 6 vertices with >=8 edges
+df_6v_subset = df_6v[(df_6v['is_bipartite']==False) & (df_6v['num_edges']>=8)]
+
+
+
+
+
 
 
 
